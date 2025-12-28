@@ -852,6 +852,14 @@ a {
     margin-bottom: 2rem;
 }
 
+.captcha-card {
+    background: #fff;
+    box-shadow: var(--shadow);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: inline-block;
+}
+
 /* ============================================
    CONTACT PAGE
    ============================================ */

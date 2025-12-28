@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | Will K Site</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify You're Human - Will K</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -32,17 +33,21 @@
         </div>
     </nav>
 
-    <!-- 404 Section -->
     <section class="error-section">
         <div class="error-container">
-            <div class="error-code animate-on-scroll">404</div>
-            <h1 class="animate-on-scroll">Page Not Found</h1>
-            <p class="animate-on-scroll">Oops! The page you're looking for doesn't exist. How did you get here?</p>
-            <a href="index.html" class="cta-button animate-on-scroll">Go Back Home</a>
+            <div class="error-code">🤖</div>
+            <h1>Please verify you're human</h1>
+            <p>Complete the check below to continue.</p>
+
+            <div class="captcha-card">
+                <!-- reCAPTCHA v2 Checkbox (site key is safe to expose) -->
+                <div class="g-recaptcha" data-sitekey="6LcRlDksAAAAABezwlV6T_GsROIELacgyzYwZdsa"></div>
+                <button id="verifyBtn" class="cta-button" style="margin-top: 1rem;">Verify and Continue</button>
+                <p id="verifyMsg" style="margin-top: .75rem; color: var(--text-light);"></p>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
@@ -70,7 +75,6 @@
         </div>
     </footer>
 
-    <script src="bot-check.js"></script>
-    <script src="script.js"></script>
+    <script src="verify.js"></script>
 </body>
 </html>

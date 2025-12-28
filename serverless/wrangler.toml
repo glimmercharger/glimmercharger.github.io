@@ -1,0 +1,12 @@
+name = "recaptcha-verify"
+main = "serverless/recaptcha-worker.js"
+compatibility_date = "2025-12-28"
+
+# Optional: set a route if you have a custom domain/zone
+# routes = [
+#   { pattern = "api.glimmercharger.dev/verify", zone_name = "glimmercharger.dev" }
+# ]
+
+[vars]
+# No plain-text secrets here. Set RECAPTCHA_SECRET via wrangler secret instead.
+
